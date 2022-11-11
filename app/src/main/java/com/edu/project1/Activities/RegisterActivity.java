@@ -83,6 +83,7 @@ public class RegisterActivity extends AppCompatActivity {
             }
         }
     }
+
     private void clear(){
         edUsername.setText("");
         edName.setText("");
