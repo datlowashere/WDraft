@@ -55,7 +55,6 @@ public class LoginActivity extends AppCompatActivity {
                 finish();
             }else{
                 Toast.makeText(LoginActivity.this, "Tên đăng nhập hoặc mật khẩu sai", Toast.LENGTH_SHORT).show();
-
             }
         }
 
