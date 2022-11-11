@@ -33,8 +33,7 @@ public class DBHelper extends SQLiteOpenHelper {
                 "donGia float," +
                 "ngayNhapHang date," +
                 "ngaySanXuat date," +
-                "maLoaiHang integer references LoaiHang(maLoaiHang)," +
-                "username text references User(username))";
+                "maLoaiHang integer references LoaiHang(maLoaiHang))";
         String createTBXuatHang="create table XuatHang(" +
                 "maXuatHang integer primary key autoincrement," +
                 "tenHang text," +
@@ -44,8 +43,7 @@ public class DBHelper extends SQLiteOpenHelper {
                 "donGia float," +
                 "donGiaXuat float," +
                 "ngayXuatHang date," +
-                "maNhapHang integer references NhapHang(maNhapHang)," +
-                "username text references User(username))";
+                "maNhapHang integer references NhapHang(maNhapHang))";
         db.execSQL(createTBUser);
         db.execSQL(createTBLoaiHang);
         db.execSQL(createTBNhapHang);
@@ -54,6 +52,7 @@ public class DBHelper extends SQLiteOpenHelper {
         db.execSQL("insert into User values('admin','Đạt Lô','datlowashere@gmail.com','Kho thực phẩm','admin')");
         db.execSQL("insert into User values('abc','Ngọc Giản','giannt@gmail.com','Kho Gìay','abc')");
         db.execSQL("insert into User values('xyz','Liam XD','liamxdd@gmail.com','Kho Thuốc','xyz')");
+
     }
 
     @Override

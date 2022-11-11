@@ -22,13 +22,6 @@ public class UserDao {
     }
 
 //    Đăng ký người dùng
-
-    String createTBUser="create table User(" +
-            "username text primary key," +
-            "hoTen text," +
-            "email text," +
-            "tenKhoHang text," +
-            "password text)";
     public long insert(User obj){
         ContentValues values=new ContentValues();
         values.put("username",obj.getUsername());
