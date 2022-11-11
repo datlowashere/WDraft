@@ -69,20 +69,25 @@ public class RegisterActivity extends AppCompatActivity {
             boolean check=dao.checkUsername(user);
             if(check==false){
                 try {
-
-
                     dao.insert(list);
                     Toast.makeText(RegisterActivity.this, "Đăng ký thành công", Toast.LENGTH_SHORT).show();
+                    clear();
                 }catch (Exception e){
                     e.printStackTrace();
                     System.out.println("Lỗi"+e);
                     Toast.makeText(RegisterActivity.this, "Lỗi", Toast.LENGTH_SHORT).show();
-
                 }
             }else{
                 Toast.makeText(RegisterActivity.this,"Tên đăng nhập đã tồn tại!!!",Toast.LENGTH_SHORT).show();
 
             }
         }
+    }
+    private void clear(){
+        edUsername.setText("");
+        edName.setText("");
+        edKhoHang.setText("");
+        edEmail.setText("");
+        edPassword.setText("");
     }
 }
