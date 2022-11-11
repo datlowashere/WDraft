@@ -6,11 +6,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.edu.project1.Dao.UserDao;
-import com.edu.project1.MainActivity;
 import com.edu.project1.R;
 import com.google.android.material.textfield.TextInputEditText;
 
