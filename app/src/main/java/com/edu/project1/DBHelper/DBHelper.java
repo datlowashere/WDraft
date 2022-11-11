@@ -18,6 +18,7 @@ public class DBHelper extends SQLiteOpenHelper {
         String createTBUser="create table User(" +
                 "username text primary key," +
                 "hoTen text," +
+                "email text" +
                 "tenKhoHang," +
                 "password)";
         String createTBLoaiHang="create table LoaiHang(" +
