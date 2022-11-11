@@ -53,6 +53,7 @@ public class DBHelper extends SQLiteOpenHelper {
         db.execSQL("insert into User values('abc','Ngọc Giản','giannt@gmail.com','Kho Gìay','abc')");
         db.execSQL("insert into User values('xyz','Liam XD','liamxdd@gmail.com','Kho Thuốc','xyz')");
 
+
     }
 
     @Override
