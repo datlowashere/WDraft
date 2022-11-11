@@ -18,9 +18,9 @@ public class DBHelper extends SQLiteOpenHelper {
         String createTBUser="create table User(" +
                 "username text primary key," +
                 "hoTen text," +
-                "email text" +
-                "tenKhoHang," +
-                "password)";
+                "email text," +
+                "tenKhoHang text," +
+                "password text)";
         String createTBLoaiHang="create table LoaiHang(" +
                 "maLoaiHang integer primary key autoincrement," +
                 "tenLoaiHang text," +
@@ -50,6 +50,10 @@ public class DBHelper extends SQLiteOpenHelper {
         db.execSQL(createTBLoaiHang);
         db.execSQL(createTBNhapHang);
         db.execSQL(createTBXuatHang);
+
+        db.execSQL("insert into User values('admin','Đạt Lô','datlowashere@gmail.com','Kho thực phẩm','admin')");
+        db.execSQL("insert into User values('abc','Ngọc Giản','giannt@gmail.com','Kho Gìay','abc')");
+        db.execSQL("insert into User values('xyz','Liam XD','liamxdd@gmail.com','Kho Thuốc','xyz')");
     }
 
     @Override
