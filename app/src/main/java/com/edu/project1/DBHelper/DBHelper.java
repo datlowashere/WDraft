@@ -33,7 +33,9 @@ public class DBHelper extends SQLiteOpenHelper {
                 "donGia float," +
                 "ngayNhapHang date," +
                 "ngaySanXuat date," +
-                "maLoaiHang integer references LoaiHang(maLoaiHang))";
+                "maLoaiHang integer references LoaiHang(maLoaiHang)," +
+                "username text references User(username))";
+
         String createTBXuatHang="create table XuatHang(" +
                 "maXuatHang integer primary key autoincrement," +
                 "tenHang text," +
@@ -43,7 +45,8 @@ public class DBHelper extends SQLiteOpenHelper {
                 "donGia float," +
                 "donGiaXuat float," +
                 "ngayXuatHang date," +
-                "maNhapHang integer references NhapHang(maNhapHang))";
+                "maNhapHang integer references NhapHang(maNhapHang)," +
+                "username text references User(username))";
         db.execSQL(createTBUser);
         db.execSQL(createTBLoaiHang);
         db.execSQL(createTBNhapHang);
