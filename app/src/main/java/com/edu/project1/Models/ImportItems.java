@@ -3,16 +3,7 @@ package com.edu.project1.Models;
 import java.util.Date;
 
 public class ImportItems {
-//    String createTBNhapHang="create table NhapHang(" +
-//            "maNhapHang integer primary key autoincrement," +
-//            "tenHang text," +
-//            "tenLoaiHang text," +
-//            "soLuongNhap integer," +
-//            "donGia float," +
-//            "ngayNhapHang date," +
-//            "ngaySanXuat date," +
-//            "maLoaiHang integer references LoaiHang(maLoaiHang)," +
-//            "username text references User(username))";
+
     private int maNhapHang,soLuongNhap,maLoaiHang;
     private float donGia;
     private String tenHang,tenLoaiHang,username;

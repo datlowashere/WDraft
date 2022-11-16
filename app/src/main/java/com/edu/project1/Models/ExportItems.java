@@ -3,17 +3,7 @@ package com.edu.project1.Models;
 import java.util.Date;
 
 public class ExportItems {
-//    String createTBXuatHang="create table XuatHang(" +
-//            "maXuatHang integer primary key autoincrement," +
-//            "tenHang text," +
-//            "tenLoaiHang text," +
-//            "soLuongNhap integer," +
-//            "soLuongXuat integer," +
-//            "donGia float," +
-//            "donGiaXuat float," +
-//            "ngayXuatHang date," +
-//            "maNhapHang integer references NhapHang(maNhapHang)," +
-//            "username text references User(username))";
+
     private int maXuatHang,soLuongNhap,soLuongXuat,maNhapHang;
     private float donGia,donGiaXuat;
     private Date ngayXuatHang;

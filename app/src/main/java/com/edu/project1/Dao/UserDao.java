@@ -15,7 +15,6 @@ import java.util.List;
 public class UserDao {
     private SQLiteDatabase db;
     private List<User> list;
-
     public UserDao(Context context) {
         DBHelper dbHelper=new DBHelper(context);
         db=dbHelper.getWritableDatabase();
@@ -32,7 +31,7 @@ public class UserDao {
         return db.insert("User",null,values);
     }
 
-//    Doi mat khau
+//    Doi thong tin
 public int update(User obj){
     ContentValues values=new ContentValues();
     values.put("hoTen",obj.getHoTen());
@@ -49,6 +48,7 @@ public int update(User obj){
         Cursor c=db.rawQuery(sql,selectionArgs);
         while (c.moveToNext()){
             User obj=new User();
+            c.moveToFirst();
             obj.setUsername(c.getString(c.getColumnIndex("username")));
             obj.setHoTen(c.getString(c.getColumnIndex("hoTen")));
             obj.setEmail(c.getString(c.getColumnIndex("email")));

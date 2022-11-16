@@ -9,6 +9,7 @@ import android.view.Window;
 import android.widget.Toast;
 
 import com.edu.project1.Dao.UserDao;
+import com.edu.project1.MainActivity;
 import com.edu.project1.R;
 import com.google.android.material.textfield.TextInputEditText;
 
@@ -18,8 +19,8 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWindow().requestFeature(Window.FEATURE_ACTION_BAR);
-        getSupportActionBar().hide();
+//        getWindow().requestFeature(Window.FEATURE_ACTION_BAR);
+//        getSupportActionBar().hide();
         setContentView(R.layout.login_activity);
 
         edUsername=findViewById(R.id.edUsername);
@@ -50,7 +51,8 @@ public class LoginActivity extends AppCompatActivity {
         }else {
             if (dao.checkLogin(user, pass) > 0) {
                 Toast.makeText(LoginActivity.this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
-                Intent ilogin=new Intent(LoginActivity.this, DasboardActivity.class);
+                Intent ilogin=new Intent(getApplicationContext(), MainActivity.class);
+                ilogin.putExtra("username",user);
                 startActivity(ilogin);
                 finish();
             }else{
