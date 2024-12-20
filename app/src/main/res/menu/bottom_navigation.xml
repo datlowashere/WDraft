@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/dashboard"
+        android:title="Tổng Quan"
+        android:icon="@drawable/squares"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/importproduct"
+        android:title="Nhập Kho"
+        android:icon="@drawable/importpr"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/exportpproduct"
+        android:title="Xuất Kho"
+        android:icon="@drawable/exportpro"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/reportproduct"
+        android:title="Thống Kê"
+        android:icon="@drawable/bar_chart"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/logout"
+        android:title="Tài Khoản"
+        android:icon="@drawable/user"
+        app:showAsAction="ifRoom"/>
+</menu>
